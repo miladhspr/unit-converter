@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+</head>
+<body>
+<h1>Unit Converter</h1>
+<form action="/convert" method="post">
+    <label for="value">Value:</label>
+    <input type="text" id="value" name="value" required><br><br>
+
+    <label for="from">Convert from:</label>
+    <select id="from" name="from">
+        <optgroup label="Length">
+            <option value="millimeter">Millimeter</option>
+            <option value="centimeter">Centimeter</option>
+            <option value="meter">Meter</option>
+            <option value="kilometer">Kilometer</option>
+            <option value="inch">Inch</option>
+            <option value="foot">Foot</option>
+            <option value="yard">Yard</option>
+            <option value="mile">Mile</option>
+        </optgroup>
+        <optgroup label="Weight">
+            <option value="milligram">Milligram</option>
+            <option value="gram">Gram</option>
+            <option value="kilogram">Kilogram</option>
+            <option value="ounce">Ounce</option>
+            <option value="pound">Pound</option>
+        </optgroup>
+        <optgroup label="Temperature">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </optgroup>
+    </select><br><br>
+
+    <label for="to">Convert to:</label>
+    <select id="to" name="to">
+        <optgroup label="Length">
+            <option value="millimeter">Millimeter</option>
+            <option value="centimeter">Centimeter</option>
+            <option value="meter">Meter</option>
+            <option value="kilometer">Kilometer</option>
+            <option value="inch">Inch</option>
+            <option value="foot">Foot</option>
+            <option value="yard">Yard</option>
+            <option value="mile">Mile</option>
+        </optgroup>
+        <optgroup label="Weight">
+            <option value="milligram">Milligram</option>
+            <option value="gram">Gram</option>
+            <option value="kilogram">Kilogram</option>
+            <option value="ounce">Ounce</option>
+            <option value="pound">Pound</option>
+        </optgroup>
+        <optgroup label="Temperature">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </optgroup>
+    </select><br><br>
+
+    <button type="submit">Convert</button>
+</form>
+
+{{if .Result}}
+<h2>Converted Value: {{.Result}}</h2>
+<a href="/">HomePage</a>
+{{end}}
+</body>
+</html>
